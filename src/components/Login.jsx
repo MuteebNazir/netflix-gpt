@@ -9,7 +9,7 @@ const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
 
-
+  const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
 
@@ -64,6 +64,7 @@ const Login = () => {
         </h1>
         {!isSignInForm && (
           <input
+          ref={name}
             type="text"
             placeholder="Full Name"
             className="p-2 my-2 w-full bg-gray-700 rounded-lg"

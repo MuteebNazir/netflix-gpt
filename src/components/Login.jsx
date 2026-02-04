@@ -1,13 +1,14 @@
 import React, { useRef, useState } from "react";
 import Header from "./Header";
 import { checkValidData } from "../utils/validate";
-import {auth} from "../utils/firebase";
-import { createUserWithEmailAndPassword} from "firebase/auth";;
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../utils/firebase";
 
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
+
 
   const email = useRef(null);
   const password = useRef(null);

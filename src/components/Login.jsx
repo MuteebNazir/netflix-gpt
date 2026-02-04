@@ -1,26 +1,44 @@
 import React, { useRef, useState } from "react";
 import Header from "./Header";
 import { checkValidData } from "../utils/validate";
+import {auth} from "../utils/firebase";
+import { createUserWithEmailAndPassword} from "firebase/auth";;
+
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState(null);
+
   const email = useRef(null);
   const password = useRef(null);
 
   const handleButtonClick = () => {
     //* Validate the form data
+    const message = checkValidData(email.current.value, password.current.value);
+    setErrorMessage(message);
+    if (!message) return;
 
-    console.log(email.current.value);
-    console.log(password.current.value);
-
-
-   const message = checkValidData(email.current.value, password.current.value);
-     setErrorMessage(message);
-
-
-//* Sign / Sign Up
-
+    //* Sign / Sign Up
+    if (!isSignInForm) {
+      // Sign Up logic
+      createUserWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value,
+      )
+        .then((userCredential) => {
+          // Signed up
+          const user = userCredential.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode + " - " + errorMessage);
+        });
+    } else {
+      // Sogn- In logic
+    }
   };
 
   const toggleSignInForm = () => {
@@ -59,7 +77,7 @@ const Login = () => {
 
         <input
           ref={password}
-          type="text"
+          type="password"
           placeholder="Password"
           className="p-2 my-2 w-full bg-gray-700 rounded-lg"
         />
@@ -73,7 +91,7 @@ const Login = () => {
         <p className="py-4 cursor-pointer" onClick={toggleSignInForm}>
           {isSignInForm
             ? "New to Netflix? Sign Up Now."
-            : "Already registered? Sign In Now."}{" "}
+            : "Already registered? Sign In Now."}
         </p>
       </form>
     </div>

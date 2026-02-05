@@ -17,7 +17,7 @@ const Login = () => {
     //* Validate the form data
     const message = checkValidData(email.current.value, password.current.value);
     setErrorMessage(message);
-    if (!message) return;
+    if (message) return;
 
     //* Sign / Sign Up
     if (!isSignInForm) {

@@ -30,7 +30,7 @@ const Login = () => {
         password.current.value,
       )
         .then((userCredential) => {
-          // Signed up
+          //* Signed up
           const user = userCredential.user;
           console.log(user);
         })
@@ -40,14 +40,14 @@ const Login = () => {
           setErrorMessage(errorCode + " - " + errorMessage);
         });
     } else {
-      // Sogn- In logic
+      //* Sign- In logic
       signInWithEmailAndPassword(
         auth,
         email.current.value,
         password.current.value,
       )
         .then((userCredential) => {
-          // Signed in
+          //* Signed in
           const user = userCredential.user;
           console.log(user);
         })

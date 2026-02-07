@@ -23,7 +23,7 @@ const Login = () => {
 
     //* Sign / Sign Up
     if (!isSignInForm) {
-      // Sign Up logic
+      //* Sign Up logic
       createUserWithEmailAndPassword(
         auth,
         email.current.value,

@@ -8,10 +8,13 @@ const userSlice = createSlice({
       return action.payload;
     },
     removeUser: (state) => {
-        return null;
+      return null;
     },
   },
 });
-export const {addUser, removeUser} = userSlice.actions;
-export default userSlice.reducer;
 
+
+
+export const { addUser, removeUser } = userSlice.actions;
+
+export default userSlice.reducer;

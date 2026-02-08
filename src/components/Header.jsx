@@ -1,6 +1,22 @@
 import React from "react";
+import { signOut } from "firebase/auth";
+import { auth } from "../utils/firebase";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleSignOut = () => {
+    signOut(auth)
+      .then(() => {
+        //* Sign-out successful.
+        navigate("/");
+      })
+      .catch((error) => {
+        //* An error happened.
+        navigate("/error");
+      });
+  };
   return (
     <div className="absolute w-screen px-12 py-1 bg-gradient-to-b from-black z-10 flex justify-between">
       <img
@@ -14,7 +30,10 @@ const Header = () => {
           alt="usericon"
           src="https://occ-0-2484-3646.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABTZ2zlLdBVC05fsd2YQAR43J6vB1NAUBOOrxt7oaFATxMhtdzlNZ846H3D8TZzooe2-FT853YVYs8p001KVFYopWi4D4NXM.png?r=229"
         />
-        <button className="font-bold text-white"> Sign Out </button>
+        <button onClick={handleSignOut} className="font-bold text-white">
+          {" "}
+          Sign Out{" "}
+        </button>
       </div>
     </div>
   );

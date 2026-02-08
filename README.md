@@ -65,9 +65,9 @@ Netflix GPT is a React-based web application inspired by Netflix, enhanced with 
 - Implement Sign in user Api
 - Implement Sign up user Api
 - Create Redux Store with userSlice.
-- 
-- 
-- 
+- Implemented Sign Out
+- Update Profile
+- Fetch From TMDB Movies.
 - 
 - 
 - 

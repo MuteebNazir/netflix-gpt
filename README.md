@@ -71,6 +71,6 @@ Netflix GPT is a React-based web application inspired by Netflix, enhanced with 
 - BugFix: Sign up user displayName and profile update.
 - BugFix: if the user is not logged in redirect /browse to login page and vice-versa.
 - Unsubcribed to the onAuthStateChanged callback.
-- 
+- Add hardcoded values to the constant files.S
 - 
 - 

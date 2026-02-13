@@ -4,11 +4,11 @@ import { API_OPTIONS } from "../utils/constants";
 import { addTrailerVideo } from "../utils/moviesSlice";
 
 const VideoBackground = ({ movieId }) => {
-  const trailerVideo = useSelector((store) => store.movies?.trailerVideo);
-
-  const dispatch = useDispatch();
  
-
+  const trailerVideo = useSelector((store) => store.movies?.trailerVideo);
+ const dispatch = useDispatch();
+  
+//* Fetch trailer Video and updating the store with trailer video data
   const getMovieVideo = async () => {
     const data = await fetch(
       "https://api.themoviedb.org/3/movie/840464/videos?language=en-US",
@@ -30,14 +30,16 @@ const VideoBackground = ({ movieId }) => {
   return (
     <div>
       <iframe
-        src={" https://www.youtube.com/embed/" + trailerVideo?.key }
+        width="560"
+        height="315"
+        src={"https://www.youtube.com/embed/" + trailerVideo?.key}
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        
+       
       ></iframe>
     </div>
   );
 };
 
 export default VideoBackground;
-
-

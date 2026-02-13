@@ -5,6 +5,7 @@ const VideoBackground = ({ movieId }) => {
   const [trailerId, setTrailerId] = useState("null");
 
   const getMovieVideo = async () => {
+
     const data = await fetch(
       "https://api.themoviedb.org/3/movie/840464/videos?language=en-US",
       API_OPTIONS,

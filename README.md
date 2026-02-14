@@ -74,3 +74,10 @@ Netflix GPT is a React-based web application inspired by Netflix, enhanced with 
 - Add hardcoded values to the constant files.S
 - Register TMDB API & create an APP & get acess token.
 - Get data from TMDB now playing Movies list API.
+- Custom Hook for Now Playing movies.
+- Create movieSlice
+- Update Store with movies Data
+- Planing for mainContainer & secondary container
+- Fetch Data for Tailer Video
+- Embedded the Youtube Video and make it autoplay and mute
+- Tailwind Classes to make Main container look Good

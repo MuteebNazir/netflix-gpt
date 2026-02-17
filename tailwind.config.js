@@ -6,5 +6,18 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    function({addUtilities}) {
+      const newutilities = {
+        ".no-scrollbar::-webkit-scrollbar": {
+          display:"none"
+        },
+        ".no-scrollbar": {
+          "-ms-overflowstyle": "none",
+          "scrollbar-width": "none"
+        }
+      }
+      addUtilities(newutilities);
+    }
+  ],
 }

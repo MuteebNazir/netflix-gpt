@@ -6,8 +6,11 @@ const MovieList = ({ title, movies }) => {
     return (
     <div className="px-6">
        <h1 className="text-pretty text-xl font-semibold py-2 text-white">{title}</h1>
-      <div className="flex overflow-x-scroll focus:scroll-auto scrollbar-hide">
-        <div className="flex">
+   <div
+  className="flex overflow-x-auto overflow-y-hidden scroll-smooth cursor-grab active:cursor-grabbing no-scrollbar"
+  onWheel={(e) => (e.currentTarget.scrollLeft += e.deltaY * 0.7)}
+>
+        <div className="flex ">
           {movies?.map((movie) => <MovieCard key={movie.id} posterPath={movie.poster_path} />)}
         </div>
       </div> 

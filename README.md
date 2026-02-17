@@ -81,3 +81,6 @@ Netflix GPT is a React-based web application inspired by Netflix, enhanced with 
 - Fetch Data for Tailer Video
 - Embedded the Youtube Video and make it autoplay and mute
 - Tailwind Classes to make Main container look Good
+- Build Secondary Component
+- Build Movie List
+- Build Movie Card

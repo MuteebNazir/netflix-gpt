@@ -84,3 +84,7 @@ Netflix GPT is a React-based web application inspired by Netflix, enhanced with 
 - Build Secondary Component
 - Build Movie List
 - Build Movie Card
+- UsePopularMovies Custom Hook
+- UseTrendingMovies Custom hook
+- UseUpcomingMovies Custom Hook
+- GPT search feature.

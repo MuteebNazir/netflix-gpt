@@ -7,19 +7,16 @@ const MainContainer = () => {
 
   if (!movies) return null;
 
-  const mainMovie = movies[18];
- 
+  const mainMovie = movies[15];
 
-  const { original_title, overview} = mainMovie;
-
+  const { original_title, overview } = mainMovie;
 
   return (
     <div>
-      <VideoTitle  title={original_title} overview={overview} />
+      <VideoTitle title={original_title} overview={overview} />
       <VideoBackground movieId={mainMovie.id} />
     </div>
   );
 };
-
 
 export default MainContainer;

@@ -60,8 +60,9 @@ const Header = () => {
         alt="Logo"
       />
      { user && <div className="flex p-2">
+      <button className="py-2 px-4 mx-4 my-4 mr-8 mt-2 bg-red-500 text-white rounded-lg flex justify-between font-semibold font-sans">GPT Search</button>
         <img
-          className="w-12 h-12 rounded-full mr-4"
+          className="w-12 h-12 rounded-e-md mr-4"
           alt="usericon"
           src={user?.photoURL}
         />

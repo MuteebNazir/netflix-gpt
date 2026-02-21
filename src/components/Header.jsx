@@ -74,8 +74,7 @@ const Header = () => {
               <option key={lang.identifier} value={lang.identifier}>
                 {lang.name}
               </option>
-            ))}
-            ;
+            ))};
           </select>
           <button
             className="py-2 px-4 mx-4 my-4 mr-8 mt-2 bg-red-500 text-white rounded-lg flex justify-between font-semibold font-sans "

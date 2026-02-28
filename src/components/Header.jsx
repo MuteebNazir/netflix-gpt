@@ -63,8 +63,8 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute w-screen px-12 py-1 bg-gradient-to-b from-black z-10 flex justify-between">
-      <img className="w-48" src={LOGO} alt="Logo" />
+    <div className="absolute w-screen px-12 py-1 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between">
+      <img className="w-48 mx-auto md:mx-0" src={LOGO} alt="Logo" />
       {user && (
         <div className="flex p-2">
           {showGptSearch && (

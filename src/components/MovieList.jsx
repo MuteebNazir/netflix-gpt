@@ -3,13 +3,13 @@ import MovieCard from "./MovieCard";
 const MovieList = ({ title, movies }) => {
   return (
     <div className="px-6">
-      <h1 className="text-pretty text-xl font-semibold py-2 text-white">
+      <h1 className="text-lg md:text-2xl text-pretty font-semibold py-2 text-white">
         {title}
       </h1>
       <div
         className="flex overflow-x-auto overflow-y-hidden scroll-smooth cursor-grab active:cursor-grabbing no-scrollbar"
         onWheel={(e) => {
-          e.preventDefault();
+          e.preventDefault(); 
           const el = e.currentTarget;
 
           el.scrollLeft += e.deltaY * 0.5;

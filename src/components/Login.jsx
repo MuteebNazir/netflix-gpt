@@ -89,9 +89,9 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="relative min-h-screen">
       <Header />
-      <div className="absolute inset-0 w-full h-full">
+      <div className="fixed inset-0 w-full h-full -z-10">
         <img className="w-full h-full object-cover"
           src={BG_URL}
           alt="Background"
